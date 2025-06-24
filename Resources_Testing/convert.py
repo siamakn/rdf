@@ -5,9 +5,10 @@ import json
 from pyld import jsonld
 
 # === CONFIGURATION ===
-SOURCE_FOLDER = r"C:\Users\Fair-04\Desktop\Resources_Testing\data"
-TARGET_FOLDER = r"C:\Users\Fair-04\Desktop\Resources_Testing\RDF"
-CONTEXT_FILE = r"C:\Users\Fair-04\Desktop\Resources_Testing\context\context.jsonld"
+BASE_PATH = "/home/siamak/workspace/github_repos/rdf_project/rdf/Resources_Testing"
+SOURCE_FOLDER = os.path.join(BASE_PATH, "data")
+TARGET_FOLDER = os.path.join(BASE_PATH, "RDF")
+CONTEXT_FILE = os.path.join(BASE_PATH, "context", "context.jsonld")
 
 # Make sure output folder exists
 os.makedirs(TARGET_FOLDER, exist_ok=True)
@@ -28,7 +29,6 @@ for fn in os.listdir(SOURCE_FOLDER):
     dst = os.path.join(TARGET_FOLDER, fn)
 
     try:
-        # load, ignoring bad bytes
         with open(src, "r", encoding="utf-8", errors="ignore") as f:
             data = json.load(f)
 
