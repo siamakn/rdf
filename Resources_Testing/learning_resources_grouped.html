@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Resources</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    h1, h2 { color: #003366; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 20px; }
+    .desc-box {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      background: #f4f4f4;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px #888;
+      z-index: 10;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 5;
+    }
+    .close-btn {
+      margin-top: 10px;
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .desc-button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    .tag {
+      display: inline-block;
+      background: #e0e0e0;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: 2px;
+      font-size: 0.8em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<h1>Learning Resources for 'Publish' (Beginner)</h1>
+<h2>HowTo</h2>
+<ul>
+<li><strong>How to parse tabular data</strong><br><a href='https://nomad-lab.eu/prod/v1/docs/howto/customization/tabular.html' target='_blank'>https://nomad-lab.eu/prod/v1/docs/howto/customization/tabular.html</a><br><em>Keywords:</em> CSV, Excel, Tabular Data, Tabular Parser YAML<br><span class='tag'>Level: Beginner</span><span class='tag'>Last Modified: 2024-06-26</span><br><button class='desc-button' onclick="showDesc('desc_2031470626005480506')">Description</button></li>
+<li><strong>How to upload and publish data for supported formats</strong><br><a href='https://nomad-lab.eu/prod/v1/docs/howto/manage/upload.html' target='_blank'>https://nomad-lab.eu/prod/v1/docs/howto/manage/upload.html</a><br><em>Keywords:</em> Get DOI, Manage Members, Supported Files, Upload Data<br><span class='tag'>Level: Beginner</span><span class='tag'>Last Modified: 2024-12-16</span><br><button class='desc-button' onclick="showDesc('desc_-7241108717392932796')">Description</button></li>
+<li><strong>How to define workflows</strong><br><a href='https://nomad-lab.eu/prod/v1/docs/howto/customization/workflows.html' target='_blank'>https://nomad-lab.eu/prod/v1/docs/howto/customization/workflows.html</a><br><em>Keywords:</em> Custom YAML Schema, Workflows<br><span class='tag'>Level: Beginner</span><span class='tag'>Last Modified: 2025-04-08</span><br><button class='desc-button' onclick="showDesc('desc_4103934568992937743')">Description</button></li>
+<li><strong>NOMAD How-to guides</strong><br><a href='https://nomad-lab.eu/prod/v1/docs/howto/overview.html' target='_blank'>https://nomad-lab.eu/prod/v1/docs/howto/overview.html</a><br><em>Keywords:</em> Base Section, Built-in Schema, Configure Oasis, Create Dataset, Custom YAML Schema, Dashboard, Develop Plugin, Filter Menu, Get DOI, Install Oasis, Install Plugin, Introduction, Manage Members, NORTH, NeXus Data Converter, Supported Files, Tabular Parser YAML, Upload Data, Widgets, Write App, Write Example Upload, Write Normalizer, Write Parser, Write Schema Package, login, register<br><span class='tag'>Level: Advanced</span><span class='tag'>Level: Beginner</span><span class='tag'>Level: Intermediate</span><span class='tag'>Last Modified: 2024-04-25</span><br><button class='desc-button' onclick="showDesc('desc_-6448785789720455718')">Description</button></li>
+</ul>
+<h2>Tutorial</h2>
+<ul>
+<li><strong>FAIRmat Tutorial 1: Publish and Explore Data with NOMAD</strong><br><a href='https://www.youtube.com/playlist?list=PLrRaxjvn6FDU5Hy3ohE4OH4b3GdH0S3zO' target='_blank'>https://www.youtube.com/playlist?list=PLrRaxjvn6FDU5Hy3ohE4OH4b3GdH0S3zO</a><br><em>Keywords:</em> Create Dataset, Dashboard, Filter Menu, Get DOI, Introduction, Supported Files, Upload Data, login, register<br><span class='tag'>Level: Advanced</span><span class='tag'>Level: Beginner</span><span class='tag'>Level: Intermediate</span><span class='tag'>Last Modified: 2022-02-07</span><br><button class='desc-button' onclick="showDesc('desc_-3621177378808309168')">Description</button></li>
+<li><strong>Uploading and Publishing Data in NOMAD</strong><br><a href='https://nomad-lab.eu/prod/v1/docs/tutorial/upload_publish.html' target='_blank'>https://nomad-lab.eu/prod/v1/docs/tutorial/upload_publish.html</a><br><em>Keywords:</em> Create Dataset, Get DOI, Introduction, Nexus Data Converter, Supported Files, Upload Data<br><span class='tag'>Level: Beginner</span><span class='tag'>Last Modified: 2025-04-04</span><br><button class='desc-button' onclick="showDesc('desc_3202602868770466398')">Description</button></li>
+<li><strong> FAIRmat tutorials 1: Publishing data with NOMAD </strong><br><a href='https://youtu.be/3rVvfYoUbO0?si=bImIw8Yb2fAIS0XT' target='_blank'>https://youtu.be/3rVvfYoUbO0?si=bImIw8Yb2fAIS0XT</a><br><em>Keywords:</em> Create Dataset, Filter Menu, Get DOI, Introduction, Manage Members, Supported Files, Upload Data, login, register<br><span class='tag'>Level: Beginner</span><span class='tag'>Last Modified: 2022-02-01</span><br><button class='desc-button' onclick="showDesc('desc_8816136610764812218')">Description</button></li>
+<li><strong>NOMAD Documentation</strong><br><a href='https://nomad-lab.eu/prod/v1/docs/' target='_blank'>https://nomad-lab.eu/prod/v1/docs/</a><br><em>Keywords:</em> Base Section, Built-in Schema, Configure Oasis, Create Dataset, Custom YAML Schema, Dashboard, Develop Plugin, Filter Menu, Get DOI, Install Oasis, Install Plugin, Introduction, Manage Members, NORTH, NeXus Data Converter, Supported Files, Tabular Parser YAML, Upload Data, Widgets, Write App, Write Example Upload, Write Normalizer, Write Parser, Write Schema Package, login, register<br><span class='tag'>Level: Advanced</span><span class='tag'>Level: Beginner</span><span class='tag'>Level: Intermediate</span><span class='tag'>Last Modified: 2025-05-22</span><br><button class='desc-button' onclick="showDesc('desc_7036080685773846003')">Description</button></li>
+</ul>
+<div id="overlay" class="overlay" onclick="hideAllPopups()"></div>
+
+<div id="desc_2031470626005480506" class="desc-box">
+  <p>This guide explains how to use NOMADs built-in tabular parser to import and structure data from Excel and CSV files. It covers different parsing modes (by column, row, and nested sections), schema annotations, and how to define paths and quantities for automatic data population. The tutorial also demonstrates how to manage multiple entries, use custom YAML schemas, and link data across sections using referencesenabling efficient data handling for experimental inventories, measurements, and structured archives.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_-7241108717392932796" class="desc-box">
+  <p>This guide explains how to upload and publish data to the NOMAD Repository using supported file formats. It covers file preparation, upload methods, processing, metadata annotation, access control, and DOI assignment. The guide also includes strategies for handling large datasets, automation via API, and special considerations for sensitive data like VASP POTCAR files. Ideal for users looking to contribute FAIR data efficiently and reproducibly.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_4103934568992937743" class="desc-box">
+  <p>This documentation introduces the abstract schema used in NOMAD to define, document, and visualize workflows. A workflow describes how data was generated by linking input and output data through tasks. The guide explains how to structure workflow metadata using YAML, including nested workflows and cross-entry references via TaskReference. It also shows how to extend base workflows with custom fields and how workflows are visualized in the NOMAD GUI using the interactive graph tool. These capabilities support clear data provenance and traceable scientific processes.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_-6448785789720455718" class="desc-box">
+  <p>This page provides categorized how-to guides for using, customizing, and developing the NOMAD platform. It supports a wide range of users � from researchers managing and exploring data via the web interface and APIs, to data stewards and developers configuring NOMAD Oasis or contributing plugins and code. Each guide offers practical, task-oriented instructions, making it easier to work with data, extend functionality, and self-host NOMAD services.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_-3621177378808309168" class="desc-box">
+  <p>This tutorial is dedicated to FAIR data management of materials science data based on the NOMAD platform.
+
+We will cover the whole data-life cycle: starting with data on your hard drive, we learn how to prepare, upload, publish data, and reference them with a DOI. Furthermore, we will learn how to explore, download, and use data that were published on NOMAD before. We will perform these steps with NOMAD's graphical user interface and its APIs. This is just one installment in a series of tutorials; other tutorials will cover data analysis, lab notebooks, using NOMAD locally (NOMAD Oasis), workflows, and much more.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_3202602868770466398" class="desc-box">
+  <p>This tutorial provides a complete walkthrough for uploading, sharing, and publishing research data in NOMAD using both computational and experimental examples. It introduces key components of the NOMAD platform�including uploads, entries, and datasets�and guides users through organizing files, processing data, assigning metadata, and obtaining DOIs. The tutorial also covers the use of NexusDataConverter for experimental data via the NOMAD GUI. By following this guide, users will gain practical skills to structure and publish FAIR-compliant data within NOMAD.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_8816136610764812218" class="desc-box">
+  <p>This is one part of our first set of tutorials "Publishing and Exploring Data with NOMAD" 
+and is part of the FAIRmat tutorial series.
+
+Example data:
+https://www.dropbox.com/scl/fi/wh812tuoc3615eprp5r0t/tutorial_files.zip?rlkey=yoxz3gtbburodcgqyzivhwoix&e=1&dl=0
+
+The official NOMAD version:
+https://nomad-lab.eu/prod/v1/gui/abou...
+
+The test installation of NOMAD. You can use our test installation of NOMAD, if you want to publish data and create DOIs. Everything you do here, we will later delete again:
+https://nomad-lab.eu/prod/v1/test
+
+The FAIRmat tutorial: Publishing and Exploring Data with NOMAD homepage:
+https://www.fairmat-nfdi.eu/fairmat/outreach-fairmat/tutorials-fairmat
+
+Exercises:
+
+    Create a NOMAD account. You can use any NOMAD link; they are all connected to the same user management.
+    Upload the example data! Compare the files with the entries that were created.
+    Delete the upload!
+    Upload the example using the command line and curl!
+    Select an entry, look at the raw files, archive, and logs tab!
+    Select a few entries and edit them! You can set comments, references, and co-authors.
+    Use this method to create a dataset!
+    Go to "Publish/Search your data" and use the search interface to explore the uploaded data! Do you see your dataset?
+    Publish the upload! Only do this on the test installation.
+    Find the dataset on the datasets page and assign a DOI! Only do this on the test installation.
+
+
+Disclaimer: NOMAD is being continuously developed based on input and feedback from the scientific community. Hence the features, services or interface may have changed since the time of recording of this video. For up-to-date information please consult our latest tutorials and the NOMAD documentation https://nomad-lab.eu/prod/v1/docs/</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<div id="desc_7036080685773846003" class="desc-box">
+  <p>This is the primary documentation portal for NOMAD, the FAIR data platform for materials science. It showcases NOMAD's data management, sharing and publication capabilities, offering structured access to tutorials, how-to guides, technical references and explanations. The portal also connects users to community resources, development guidelines, and support channels.</p>
+  <button class="close-btn" onclick="hideAllPopups()">Close</button>
+</div>
+
+<script>
+function showDesc(id) {
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById(id).style.display = 'block';
+}
+function hideAllPopups() {
+  document.getElementById('overlay').style.display = 'none';
+  let boxes = document.getElementsByClassName('desc-box');
+  for (let b of boxes) b.style.display = 'none';
+}
+</script>
+
+</body></html>
