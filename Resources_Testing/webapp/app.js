@@ -53,12 +53,16 @@ function buildDropdowns(filteredResources = allResources) {
     });
 
     const select = document.getElementById(key);
+        const currentValue = select.value;
     select.innerHTML = '<option value="">-- Any --</option>';
     Array.from(values).sort().forEach(v => {
       const opt = document.createElement("option");
       opt.value = v;
       opt.textContent = v;
       select.appendChild(opt);
+      if (v === currentValue) {
+        opt.selected = true;
+      }
     });
   });
 }
@@ -112,5 +116,5 @@ loadResources();
 
 FILTER_KEYS.forEach(({ key }) => {
   const select = document.getElementById(key);
-  select.addEventListener("change", buildDropdowns);
+  select.addEventListener("change", applyFilters);
 });
