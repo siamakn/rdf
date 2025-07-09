@@ -53,7 +53,7 @@ function buildDropdowns(filteredResources = allResources) {
     });
 
     const select = document.getElementById(key);
-        const currentValue = select.value;
+    const currentValue = select.value;
     select.innerHTML = '<option value="">-- Any --</option>';
     Array.from(values).sort().forEach(v => {
       const opt = document.createElement("option");
@@ -96,20 +96,51 @@ function renderResults(results) {
     return;
   }
 
-  results.forEach(res => {
+  results.forEach((res, index) => {
     const title = getValue(res, ["http://schema.org/name", "schema:name", "dct:title"]) || "No Title";
     const desc = getValue(res, ["http://schema.org/description", "schema:description", "dct:description"]) || "No description.";
-    const link = getValue(res, ["http://schema.org/identifier", "schema:identifier"]) || "#";
+    const link = getValue(res, ["http://schema.org/url", "schema:url", "identifier", "http://schema.org/identifier"]) || "#";
+    const subject = getValue(res, ["http://purl.org/dc/terms/subject", "dct:subject", "subject"]) || "No subject";
+    const keywords = getValue(res, ["http://schema.org/keywords", "schema:keywords", "keywords"]) || [];
+    const level = getValue(res, ["http://schema.org/educationalLevel", "schema:educationalLevel", "educationalLevel"]) || "Unspecified";
+    const modified = getValue(res, ["http://schema.org/dateModified", "schema:dateModified", "dateModified"]) || "Unknown";
+
+    const keywordStr = Array.isArray(keywords) ? keywords.join(", ") : keywords;
 
     const div = document.createElement("div");
     div.className = "result-card";
     div.innerHTML = `
-      <h3>${title}</h3>
-      <p>${desc}</p>
+      <h3><strong>${title}</strong></h3>
       <p><a href="${link}" target="_blank">${link}</a></p>
+      <p><em>Subject:</em> ${subject}</p>
+      <p><em>Keywords:</em> ${keywordStr}</p>
+      <span class="badge">Level: ${level}</span>
+      <span class="badge">Last Modified: ${modified}</span>
+      <br><br>
+      <button class="desc-toggle" onclick="openModal(${index})">Description</button>
     `;
     container.appendChild(div);
+
+    // Hidden modal element
+    const modal = document.createElement("div");
+    modal.className = "modal";
+    modal.id = `modal-${index}`;
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close" onclick="closeModal(${index})">&times;</span>
+        <p>${desc}</p>
+      </div>
+    `;
+    document.body.appendChild(modal);
   });
+}
+
+function openModal(index) {
+  document.getElementById(`modal-${index}`).style.display = "block";
+}
+
+function closeModal(index) {
+  document.getElementById(`modal-${index}`).style.display = "none";
 }
 
 loadResources();
