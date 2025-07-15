@@ -98,6 +98,7 @@ function applyFilters() {
 
 function renderResults(results) {
   const container = document.getElementById("results");
+  document.getElementById("results-count").textContent = `Showing ${results.length} resource(s)`;
   container.innerHTML = "";
 
   if (results.length === 0) {
