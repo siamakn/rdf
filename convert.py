@@ -5,7 +5,7 @@ import json
 from pyld import jsonld
 
 # === CONFIGURATION ===
-BASE_PATH = "/home/siamak/workspace/github_repos/rdf_project/rdf/Resources_Testing"
+BASE_PATH = "."
 SOURCE_FOLDER = os.path.join(BASE_PATH, "data")
 TARGET_FOLDER = os.path.join(BASE_PATH, "RDF")
 CONTEXT_FILE = os.path.join(BASE_PATH, "context", "context.jsonld")
