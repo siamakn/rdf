@@ -1,0 +1,4 @@
+pyld
+rdflib
+matplotlib
+networkx

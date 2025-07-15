@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOMAD Training Resources</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>NOMAD Training Resources</h1>
+
+  <div class="layout">
+    <div class="sidebar">
+      <div id="filters">
+        <label for="subject">Subject:</label>
+        <select id="subject" onchange="applyFilters()"><option value="">-- Any --</option></select>
+
+        <label for="keywords">Keyword:</label>
+        <select id="keywords" onchange="applyFilters()"><option value="">-- Any --</option></select>
+
+        <label for="level">Educational Level:</label>
+        <select id="level" onchange="applyFilters()"><option value="">-- Any --</option></select>
+
+        <label for="method">Instructional Method:</label>
+        <select id="method" onchange="applyFilters()"><option value="">-- Any --</option></select>
+
+        <label for="type">Resource Type:</label>
+        <select id="type" onchange="applyFilters()"><option value="">-- Any --</option></select>
+
+        <button onclick="applyFilters()">Search</button>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <p id="results-count"></p>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
