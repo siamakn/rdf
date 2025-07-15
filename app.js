@@ -29,12 +29,21 @@ async function loadResources() {
   renderResults(allResources);
 }
 
+/*
 async function fetchFileList() {
   const res = await fetch(`${RDF_FOLDER}/`);
   const html = await res.text();
   const matches = html.match(/href="([^?][^\"]+\.jsonld)"/g) || [];
   return matches.map(m => m.replace(/href="/, "").replace(/"/, ""));
 }
+*/
+
+async function fetchFileList() {
+  const res = await fetch(`${RDF_FOLDER}/filelist.json`);
+  const json = await res.json();
+  return json;
+}
+
 
 function getValue(obj, keys) {
   for (const key of keys) {
