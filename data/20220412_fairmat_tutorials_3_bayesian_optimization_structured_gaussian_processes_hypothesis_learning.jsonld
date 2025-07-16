@@ -2,7 +2,7 @@
   "@context": "context/context.jsonld",
   "@id": "465ccbe5-5306-4de2-a7a3-3dad8fa24904",
   "@type": "schema:LearningResource",
-  "dct:title": " FAIRmat Tutorials 333: Bayesian Optimization, structured Gaussian processes, hypothesis learning ",
+  "dct:title": " FAIRmat Tutorials 3: Bayesian Optimization, structured Gaussian processes, hypothesis learning ",
   "dct:description": "Sergei V. Kalinin talks about:\nBayesian Optimization, structured Gaussian processes, and hypothesis learning for materials and physical discovery.\n\nMore info on the FAIRmat tutorial series here\n\nwebsite: https://www.fairmat-nfdi.eu/fairmat/outreach-fairmat/tutorials-fairmat\n\nTutorial 3:    • FAIRmat Tutorials 3: Introduction to ...  \n\nDisclaimer: NOMAD is being continuously developed based on input and feedback from the scientific community. Hence the features, services or interface may have changed since the time of recording of this video. For up-to-date information please consult our latest tutorials and the NOMAD documentation https://nomad-lab.eu/prod/v1/docs/",
   "dct:subject": [
     "API",
